@@ -122,3 +122,5 @@ if [ -f ~/.config/csmgmt/shell_aliases ]; then
 	. ~/.config/csmgmt/shell_aliases
 fi
 
+
+pfetch
