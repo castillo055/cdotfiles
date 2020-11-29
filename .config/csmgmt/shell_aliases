@@ -16,6 +16,7 @@ alias cdrl='cd ~/repos/local'
 alias cdrg='cd ~/repos/github'
 alias cdrs='cd ~/repos/star'
 alias cdri='cd ~/repos/inhouse'
+alias cdrp='cd ~/repos/practicas'
 
 alias cds='cd ~/.sources'
 alias cdb='cd ~/.local/bin'
