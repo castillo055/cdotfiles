@@ -30,11 +30,25 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
-colorscheme wombat256grf
+"colorscheme wombat256grf
+colorscheme gruvbox
 set termguicolors
 highlight Normal guibg=NONE ctermbg=NONE
 
 let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_latexmk = {
+            \ 'build_dir' : '.texbuild',
+            \}
+
+nnoremap <silent> <Esc> :noh<CR>
+nnoremap <silent> j :normal! gj<CR>
+nnoremap <silent> k :normal! gk<CR>
+nnoremap <silent> gj :normal! j<CR>
+nnoremap <silent> gk :normal! k<CR>
+nnoremap <silent> <down> :normal! gj<CR>
+nnoremap <silent> <up> :normal! gk<CR>
+inoremap <silent> <down> <C-o>:normal! gj<CR>
+inoremap <silent> <up> <C-o>:normal! gk<CR>
 
 "noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 5, 1)<CR>
 "noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 5, 1)<CR>
@@ -150,4 +164,7 @@ hi Normal guibg=NONE ctermbg=NONE
 " ======= CALENDAR CONFIG ========
 "let g:calendar_google_calendar = 1
 "let g:calendar_google_task = 1
+
+" ====== TERMINAL MAPPINGS =======
+tnoremap <Esc> <C-\><C-n>
 

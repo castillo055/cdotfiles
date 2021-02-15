@@ -4,12 +4,17 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/victor/.config/zsh/.oh-my-zsh"
 
+fpath=(~/.local/share/git-completion/zsh $fpath)
+source /usr/share/git-completion/prompt.sh
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_SHOWDIRTYSTATE=1
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="dallas"
-PS1='%F{green}[%n]%F{cyan} %~ > %f'
+PS1='%F{green}[%n]%F{cyan} %~ %f$(__git_ps1)%F{cyan}> %f'
 
 # Load ENV variables
 if [ -f ~/.config/csmgmt/shell_env ]; then
@@ -47,13 +52,13 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -62,15 +67,15 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -123,4 +128,6 @@ if [ -f ~/.config/csmgmt/shell_aliases ]; then
 fi
 
 
-pfetch
+if [ "$NO_ZSH_GREETING" != "true" ]; then
+	pfetch
+fi

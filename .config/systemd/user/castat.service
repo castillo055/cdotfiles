@@ -5,6 +5,7 @@ Type=simple
 Restart=always
 RestartSec=30
 TimeoutStartSec=0
-ExecStart=/home/victor/repos/local/castat/castat
+Environment="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/victor/repos/inhouse/cipcomms"
+ExecStart=/home/victor/.local/bin/castat
 [Install]
 WantedBy=default.target

@@ -1,5 +1,5 @@
 #!/bin/bash
-killall headset-docker
+#killall headset-docker
 
 prev=0
 while true; do

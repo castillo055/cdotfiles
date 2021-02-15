@@ -1,6 +1,0 @@
-#!/bin/dash
-
-#==================== GRAPHICS ====================
-graphics="$(optimus-manager --status)"
-
-

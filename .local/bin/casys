@@ -46,4 +46,4 @@ esac >/dev/null
 #STATUS_MOD_CACHE="/tmp/statusbar/91_volume"
 #bash $STATUS_MODULE > $STATUS_MOD_CACHE-tmp
 #mv $STATUS_MOD_CACHE-tmp $STATUS_MOD_CACHE
-/home/victor/.config/dwmstatus/.updaters/91_volume
+/home/victor/repos/public/castat-modules/.updaters/91_volume

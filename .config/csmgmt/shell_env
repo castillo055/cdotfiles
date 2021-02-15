@@ -1,3 +1,7 @@
+#!/bin/sh
+
+export XDG_CONFIG_HOME="/home/victor/.config"
+
 export PATH=$PATH:/home/victor/.local/bin
 
 export EDITOR=/bin/nvim
@@ -15,4 +19,11 @@ export WWW_HOME="~/.config/w3m"
 export __GL_SHADER_DISK_CACHE_PATH="~/.cache/nv"
 export VIMINIT=":set runtimepath^=/home/victor/.config/vim|:source /home/victor/.config/vim/vimrc"
 
+export HISTFILE="/home/victor/.cache/shell_hist"
+
 export ZSH_CUSTOM="/home/victor/.config/zsh/.oh-my-zsh"
+export ZSH_COMPDUMP="/home/victor/.cache/zcompdump"
+
+export NPM_CONFIG_USERCONFIG="/home/victor/.config/npm/npmrc"
+
+export PLATFORMIO_CORE_DIR="/home/victor/.local/share/platformio"
